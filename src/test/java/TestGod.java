@@ -23,8 +23,12 @@ public class TestGod {
         Assert.assertEquals(expected, actual);
     }
 
-    // this test is meant to fail
-    @Test
+    /*
+    purpose of this test is to visualize the time difference
+    couldn't think of anything relevant to put in here
+    that would have a substantial time dif.
+     */
+    @Test (expected = AssertionError.class)
     public void timeStamp () {
         God god = new God();
         Instant start = Instant.now();

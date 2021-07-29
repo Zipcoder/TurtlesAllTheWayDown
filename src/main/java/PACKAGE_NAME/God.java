@@ -20,7 +20,7 @@ public class God {
 
     //used to check the actual time stamp
     public void semiDeathLoop () {
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 1000; i++) {
             System.out.println("hello");
         }
     }
