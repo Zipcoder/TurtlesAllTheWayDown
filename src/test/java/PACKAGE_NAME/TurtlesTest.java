@@ -4,6 +4,9 @@ import PACKAGE_NAME.Factorial;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.Duration;
+import java.time.Instant;
+
 import static org.junit.Assert.*;
 
 /**
@@ -35,6 +38,20 @@ public class TurtlesTest {
         Assert.assertEquals(expected, actual);
     }
 
+@Test
+    public void timeTest(){
+        int p = 3768;
+        int q = 17010;
+    Instant start1 = Instant.now();
+    GCD.gcd(p,q);
+    Instant finish1 = Instant.now();
+    long elTiempoQPaso = Duration.between(start1,finish1).toMillis();
+    Instant start2 = Instant.now();
+    GCD.gcd2(p,q);
+    Instant finish2 = Instant.now();
+    long elTiempoQPaso2 = Duration.between(start2,finish2).toMillis();
 
+    Assert.assertTrue(elTiempoQPaso>elTiempoQPaso2);
+}
 
 }
