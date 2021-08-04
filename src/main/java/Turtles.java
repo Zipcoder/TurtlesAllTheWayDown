@@ -16,6 +16,11 @@ public class Turtles {
             return factorial(n-1) * n;
         }
 
-        public
+        public int greatestCommDiv(int x, int y){
+            while(x > y && y > 0){
+                return greatestCommDiv(y, x % y);
+            }
+            return x;
+        }
     }
 

@@ -34,5 +34,31 @@ public class TurtlesTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void divisorTest(){
+        //given
+        int x = 1440;
+        int y = 408;
+        int expected = 24;
+
+        //when
+        int actual = turtles.greatestCommDiv(x, y);
+
+        //then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void divisorTest2() {
+        //given
+        int x = 25570;
+        int y = 650;
+        int expected = 10;
+
+        //when
+        int actual = turtles.greatestCommDiv(x, y);
+
+        //then
+        Assert.assertEquals(expected, actual);
+    }
 
 }
