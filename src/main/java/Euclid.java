@@ -1,9 +1,9 @@
  public class Euclid {
 
         // recursive implementation
-        public static int gcd(int p, int q) {
+        public static int gcd1(int p, int q) {
             if (q == 0) return p;
-            else return gcd(q, p % q);
+            else return gcd1(q, p % q);
         }
 
         // non-recursive implementation

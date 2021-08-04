@@ -10,7 +10,7 @@ public class GCDTest {
 
 
         Instant start1 = Instant.now();
-        Euclid.gcd(5000,10);
+        Euclid.gcd1(5000,10);
         Instant finish1 = Instant.now();
         long timeElapsed1 = Duration.between(start1, finish1).toMillis();
 
@@ -20,6 +20,29 @@ public class GCDTest {
         long timeElapsed2 = Duration.between(start2, finish2).toMillis();
 
         Assert.assertTrue(timeElapsed1 > timeElapsed2);
+    }
+
+    @Test
+    public void gcd1Test(){
+        //given
+        Integer expected = 3;
+
+        //when
+        Integer actual = Euclid.gcd1(9,6);
+
+        //then
+        Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void gcd2Test(){
+        //given
+        Integer expected = 3;
+
+        //when
+        Integer actual = Euclid.gcd1(9,6);
+
+        //then
+        Assert.assertEquals(expected,actual);
     }
 
 }
