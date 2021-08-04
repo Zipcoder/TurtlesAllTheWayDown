@@ -29,4 +29,17 @@ public class LongestCommonSubsequenceTest {
         Assert.assertEquals(expectedString,actualString);
 
     }
+
+    @Test
+    public void lcsTest3() {
+        // Given
+        String expectedString = "GCGCG";
+
+        // When
+        String actualString = LongestCommonSubsequence.lcs("GCCCTAGCG","GCGCAATG");
+
+        // Then
+        Assert.assertEquals(expectedString,actualString);
+
+    }
 }
