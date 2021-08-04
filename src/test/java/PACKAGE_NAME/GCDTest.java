@@ -2,7 +2,6 @@ package PACKAGE_NAME;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.time.Duration;
 import java.time.Instant;
 
@@ -25,7 +24,7 @@ public class GCDTest {
         int expectedNumber = 8;
 
         // When
-        int actualNumber = GCD.gcd1(14408,1408);
+        int actualNumber = GCD.gcd2(14408,1408);
 
         // Then
         Assert.assertEquals(expectedNumber, actualNumber);
