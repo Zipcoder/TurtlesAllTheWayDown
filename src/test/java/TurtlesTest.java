@@ -1,6 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.Duration;
+import java.time.Instant;
+
 /**
  * Created by kristofer on 7/14/20.
  */
@@ -28,10 +31,14 @@ public class TurtlesTest {
         int expected = 362880;
 
         //when
+        Instant start = Instant.now();
         int actual = turtles.factorial(n);
+        Instant finish = Instant.now();
+        long timeElapsed = Duration.between(start, finish).toMillis();
 
         //then
         Assert.assertEquals(expected, actual);
+        System.out.println(timeElapsed);
     }
 
     @Test
@@ -42,10 +49,15 @@ public class TurtlesTest {
         int expected = 24;
 
         //when
+        Instant start = Instant.now();
         int actual = turtles.greatestCommDiv(x, y);
+        Instant finish = Instant.now();
+        long timeElapsed = Duration.between(start, finish).toMillis();
+
 
         //then
         Assert.assertEquals(expected, actual);
+        System.out.println(timeElapsed);
     }
     @Test
     public void divisorTest2() {
@@ -55,10 +67,30 @@ public class TurtlesTest {
         int expected = 10;
 
         //when
+        Instant start = Instant.now();
         int actual = turtles.greatestCommDiv(x, y);
+        Instant finish = Instant.now();
+        long timeElapsed = Duration.between(start, finish).toMillis();
+
 
         //then
         Assert.assertEquals(expected, actual);
+        System.out.println(timeElapsed);
+    }
+
+    @Test
+    public void longestComSeqTest (){
+        //given
+        String one = "GGCACCACG";
+        String two = "ACGGCGGATACG";
+        String expected = "GGCAACG";
+
+        //when
+        String actual = turtles.longestComSeq(one, two);
+
+        //then
+        Assert.assertEquals(expected, actual);
+
     }
 
 }
