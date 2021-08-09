@@ -1,3 +1,4 @@
+import PACKAGE_NAME.Turtles;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,5 +17,30 @@ public void testFactorial(){
     int actual= PACKAGE_NAME.Turtles.factorial(n);
     //then
         Assert.assertEquals(expected,actual);
+}
+@Test
+    public void testGCD(){
+        //given
+    int p=102;
+    int q=68;
+    int expected=34;
+
+    //when
+    int actual= Turtles.gcd(p,q);
+
+    //then
+    Assert.assertEquals(expected,actual);
+}
+
+@Test
+    public void testLCS(){
+    //given
+    String s="GGCACCACG";
+    String t="ACGGCGGATACG";
+    String expected="GGCACCACG";
+    //
+    String actual=Turtles.longestCommonSubsequence(s,t);
+    //
+    Assert.assertEquals(expected,actual);
 }
 }
